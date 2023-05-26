@@ -29,20 +29,18 @@
 
   <div class="content">
     <p>
-      {#each content.split(/\b(\w+)\b/) as part, i}
-        {#if i % 2 === 0}
-          {part}
+      {#each content.split(' ') as word, i}
+        {#if tooltips.find(({ word: tooltipWord }) => tooltipWord.toLowerCase() === word.toLowerCase())}
+          <span
+            on:mouseenter={(event) => showTooltip(event, word)}
+            on:mouseleave={hideTooltip}
+            class="tooltip-word"
+          >
+            {word}{' '}
+          </span>
         {:else}
-          {#if tooltips.find(({ word }) => word.toLowerCase() === part.toLowerCase())}
-            <span
-              on:mouseenter={(event) => showTooltip(event, part)}
-              on:mouseleave={hideTooltip}
-              class="tooltip-word"
-            >
-              {part}
-            </span>
-          {:else}
-            {part}
+          {#if i !== content.split(' ').length - 1}
+            {word}{' '}
           {/if}
         {/if}
       {/each}

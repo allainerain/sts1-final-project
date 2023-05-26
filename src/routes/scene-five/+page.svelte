@@ -1,6 +1,15 @@
 <script>
-    import CrosswordPuzzle from '../components/crosswordPuzzle.svelte';
+    import CrosswordPuzzle from '../../components/crosswordPuzzle.svelte'
 
 </script>
 
-<CrosswordPuzzle />
+<div>
+    <CrosswordPuzzle />
+</div>
+
+<style>
+    div{
+        margin:20%
+    }
+</style>
+
