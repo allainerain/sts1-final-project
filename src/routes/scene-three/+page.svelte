@@ -1,13 +1,4 @@
-<!-- <script>
-    import { sceneThreeDialogues } from './scene-three-dialogues.js'
-
-    import Scene from '../../components/scene.svelte'
-</script>
-
-<Scene sceneDialogues={sceneThreeDialogues} nextScene="scene-four"/>
- -->
-
- <script>
+<script>
     import Scene from '../../components/scene.svelte';
     import { sceneThreeDialogues } from './scene-three-dialogues.js';
     import { tooltips } from './scene-three-tooltips.js';
