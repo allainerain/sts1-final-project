@@ -7,7 +7,7 @@
   
   <Scene
     sceneDialogues={sceneFourDialogues}
-    nextScene="scene-four"
+    nextScene="scene-five"
     {tooltips}
   />
   
