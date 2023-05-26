@@ -1,21 +1,21 @@
-export const sceneTwoDialogues = {
-    sceneName: "two",
+export const sceneThreeDialogues = {
+    sceneName: "three",
     body: [
                 {
-                    speaker: 'Gasoline Boy',
-                    content: 'Magkano bossing?'
+                    speaker: 'Manong Driver',
+                    content: 'Hala, may plano pala talagang i-modernize ang mga jeeps no?'
                 },
                 {
                     speaker: 'Old Manong Driver 1',
-                    content: '500 lang boss'
+                    content: 'Oo nga, sabi kasi nila masama na sa kalusugan at sa kapaligaran kaming mga old jeepneys'
                 },
                 {
                     speaker: 'Old Manong Driver 1',
-                    content: 'Sorry OJ, hindi kita na full tank ngayon. Ito lang kaya ng kinita natin ngayon.'
+                    content: 'I-pagbabawal na daw nila yung mga jeep na katulad mo. Kaso hindi ko naman kayang bayaran yung ejeep na binebenta nila'
                 },
                 {
                     speaker: 'OJ',
-                    content: 'Ayos lang bossing! sus naiintindihan ko naman. Ang mahal na rin kasi ng presyo ng gasolina at mga bilihin ngayon. Sa susunod nalang pag malaki ang kita natin ulit.'
+                    content: 'Gusto ko mang makatulong, hindi ko alam pano ka tutulungan. Alam kong bigla-bigla ang pagdedesisyon nito nang walang maayos na pagaaral ng mga epekto nito sa tao.'
                 },
                 {
                     speaker: 'Old Manong Driver 1',
