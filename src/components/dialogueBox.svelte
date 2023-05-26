@@ -29,7 +29,7 @@
 
   <div class="content">
     <p>
-      {#each content.split(/\b(\w+(?:-\w+)*)\b/g) as word}
+      {#each content.split(' ') as word, i}
         {#if tooltips.find(({ word: tooltipWord }) => tooltipWord.toLowerCase() === word.toLowerCase())}
           <span
             on:mouseenter={(event) => showTooltip(event, word)}
@@ -39,7 +39,9 @@
             {word}{' '}
           </span>
         {:else}
-          {word}{' '}
+          {#if i !== content.split(' ').length - 1}
+            {word}{' '}
+          {/if}
         {/if}
       {/each}
     </p>
