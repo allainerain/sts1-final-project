@@ -1,6 +1,9 @@
 <script>
+    import CrosswordPuzzle from '../components/crosswordPuzzle.svelte';
 
 </script>
+
+<CrosswordPuzzle />
 
 <div class = "main">
     <h1 class = "title"> Story Title </h1>
