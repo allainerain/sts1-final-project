@@ -1,10 +1,18 @@
 <script>
     import DialogueBox from './dialogueBox.svelte';
+    import Characters from './characters.svelte'
   
     export let nextScene;
     export let sceneDialogues;
     export let tooltips;
-  
+    export let sceneCharacters;
+
+    let firstCharacterExp = sceneCharacters.firstCharacter.expressions
+    let secondCharacterExp = sceneCharacters.secondCharacter.expressions
+    let thirdCharacterExp = sceneCharacters.thirdCharacter.expressions
+
+    console.log(firstCharacterExp)
+
     let length = sceneDialogues.body.length - 1;
     let count = 0;
   
@@ -19,6 +27,7 @@
   </script>
   
   <section class = "card">
+    <Characters firstCharacter={firstCharacterExp[count]} secondCharacter={secondCharacterExp[count]} thirdCharacter={thirdCharacterExp[count]}/>
     <DialogueBox class="dialogue-box" speaker={sceneDialogues.body[count].speaker} content={sceneDialogues.body[count].content} character={sceneDialogues.body[count].image} tooltips={tooltips} />
     <div class = "buttons">
       {#if count > 0}

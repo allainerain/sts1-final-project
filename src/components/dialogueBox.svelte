@@ -6,7 +6,7 @@
   export let speaker;
   export let content;
   export let tooltips = [];
-  export let character;
+
 
   let tooltipText = '';
   let finishedPrinting = false;
