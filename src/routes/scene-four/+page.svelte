@@ -12,7 +12,7 @@
   <Scene
     sceneCharacters={sceneCharacters}
     sceneDialogues={sceneFourDialogues}
-    nextScene="/scene-five"
+    nextScene="/crossword"
     {tooltips}
   />
   
