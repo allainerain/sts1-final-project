@@ -9,6 +9,8 @@
 
 <style>
     div{
+        top:0;
+        margin-top: 0px;
         margin:20%
     }
 </style>
