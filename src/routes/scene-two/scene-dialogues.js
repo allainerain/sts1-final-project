@@ -1,4 +1,4 @@
-export const sceneTwoDialogues = {
+export const sceneDialogues = {
     sceneName: "two",
     body: [
                 {

@@ -4,4 +4,8 @@
   
 </script>
   
-<Crossword data="{crosswordData}" />
+<Crossword class='svelte-crossword' data="{crosswordData}" />
+
+<style>
+
+</style>
