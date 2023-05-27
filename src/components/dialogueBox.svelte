@@ -7,7 +7,6 @@
   export let content;
   export let tooltips = [];
 
-
   let tooltipText = '';
   let finishedPrinting = false;
 
@@ -119,6 +118,9 @@
 
 
 <style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
  
   .card {
     text-align: left;
@@ -129,6 +131,8 @@
     width:100;
     height:40%;
     background-color: black;
+    font-family: 'Pangolin', cursive;
+
   }
 
 
