@@ -125,10 +125,9 @@
     bottom:0;
     left:0;
     margin:0;
-    padding:50px 100px 50px 100px;
-    display: block;
-    width:100%;
-    height: 40%;
+    padding:5vw 10vw 5vw 10vw;
+    width:100;
+    height:40%;
     background-color: black;
   }
 
