@@ -1,10 +1,12 @@
 <script>
   import { afterUpdate } from 'svelte';
   import Typewriter from 'svelte-typewriter';
+  // import CrosswordPuzzle from './characters/manong-driver-happy.png';
 
   export let speaker;
   export let content;
   export let tooltips = [];
+  export let character;
 
   let tooltipText = '';
   let finishedPrinting = false;
@@ -47,80 +49,95 @@
   });
 </script>
 
-<div class="card">
-  <div class="speaker">
-    <h1>{speaker}</h1>
+<!-- <section> -->
+  <div class="character">
+    <img src="/characters/manong-driver-happy.png" alt="{character}" />
   </div>
-
-  <!-- WITHOUT TYPEWRITER EFFECT -->
-    <!-- <p>
-      {#each content.split(/\b(\w+)\b/) as part, i}
-        {#if i % 2 === 0}
-          {part}
-        {:else}
-          {#if tooltips.find(({ word }) => word.toLowerCase() === part.toLowerCase())}
-            <span
-              on:mouseenter={(event) => showTooltip(event, part)}
-              on:mouseleave={hideTooltip}
-              class="tooltip-word"
-            >
-              {part}
-            </span>
-          {:else}
-            {part}
-          {/if}
-        {/if}
-      {/each}
-    </p> -->
-
-    <!-- WITH TYPEWRITER EFFECT -->
-  {#if !finishedPrinting}
-    <div class="content">
-      <p>
-
-        <Typewriter on:done={handleFinish}>{content}</Typewriter>
-      </p>
+  
+  <div class="card">
+    
+    <div class="speaker">
+      <h1>{speaker}</h1>
     </div>
-  {:else}
+  
     <div class="content">
-      <p>
-        {#if tooltipsExist}
-          {#each contentArray as word, i}
-            {#if tooltips.find(({ word: tooltipWord }) => tooltipWord.toLowerCase() === word.toLowerCase())}
-              <span
-                on:mouseenter={(event) => showTooltip(event, word)}
-                on:mouseleave={hideTooltip}
-                class="tooltip-word"
-              >
-                {word}{' '}
-              </span>
+      <!-- WITHOUT TYPEWRITER EFFECT -->
+        <!-- <p>
+          {#each content.split(/\b(\w+)\b/) as part, i}
+            {#if i % 2 === 0}
+              {part}
             {:else}
-              {word}{' '}
+              {#if tooltips.find(({ word }) => word.toLowerCase() === part.toLowerCase())}
+                <span
+                  on:mouseenter={(event) => showTooltip(event, part)}
+                  on:mouseleave={hideTooltip}
+                  class="tooltip-word"
+                >
+                  {part}
+                </span>
+              {:else}
+                {part}
+              {/if}
             {/if}
           {/each}
-        {:else}
-          {#each contentArray as word, i}
-            {word}{' '}
-          {/each}
-        {/if}
-      </p>
+        </p> -->
+  
+      <!-- WITH TYPEWRITER EFFECT -->
+      {#if !finishedPrinting}
+      <div class="content">
+        <p> <Typewriter on:done={handleFinish}>{content}</Typewriter> </p>
+      </div>
+      {:else}
+        <div class="content">
+          <p>
+            {#if tooltipsExist}
+              {#each contentArray as word, i}
+                {#if tooltips.find(({ word: tooltipWord }) => tooltipWord.toLowerCase() === word.toLowerCase())}
+                  <span
+                    on:mouseenter={(event) => showTooltip(event, word)}
+                    on:mouseleave={hideTooltip}
+                    class="tooltip-word"
+                  >
+                    {word}{' '}
+                  </span>
+                {:else}
+                  {word}{' '}
+                {/if}
+              {/each}
+            {:else}
+              {#each contentArray as word, i}
+                {word}{' '}
+              {/each}
+            {/if}
+          </p>
+        </div>
+      {/if}
+  
+      {#if tooltipText}
+        <div class="tooltip">{tooltipText}</div>
+      {/if}
     </div>
-  {/if}
+  </div>
+<!-- </section> -->
 
-  {#if tooltipText}
-    <div class="tooltip">{tooltipText}</div>
-  {/if}
-</div>
 
 <style>
+  /* section{
+    left: 0;
+    margin:0;
+    padding:0;
+    
+  } */
   .card {
-    width: 300px;
-    border: 1px solid #aaa;
-    border-radius: 2px;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 1em;
-    margin: 0 0 1em 0;
-    text-align: center;
+    text-align: left-aligned;
+    bottom:0;
+    left:0;
+    margin:0;
+    padding:20px;
+    display: block;
+    width:100%;
+    height: 40%;
+    background-color: black;
   }
 
   .speaker {
@@ -142,5 +159,9 @@
     border-radius: 4px;
     white-space: nowrap;
     z-index: 9999;
+  }
+
+  img{
+    height: 100px;
   }
 </style>

@@ -18,24 +18,56 @@
   
   </script>
   
-  <h1>Scene</h1>
-  <DialogueBox class="dialogue-box" speaker={sceneDialogues.body[count].speaker} content={sceneDialogues.body[count].content} tooltips={tooltips} />
+  <section class = "card">
+    <h1>Scene</h1>
+    <DialogueBox class="dialogue-box" speaker={sceneDialogues.body[count].speaker} content={sceneDialogues.body[count].content} character={sceneDialogues.body[count].image} tooltips={tooltips} />
+    <div class = "buttons">
+      {#if count > 0}
+      <button on:click={handleBack}>
+        Back
+      </button>
+      {/if}
+      
+      {#if count < length}
+        <button on:click={handleNext}>
+          Next
+        </button>
+      {/if}
+      
+      {#if count === length}
+        <a href={nextScene}>
+          <button>Next Scene</button>
+        </a>
+      {/if}
+    </div>
+ 
   
-  {#if count > 0}
-    <button on:click={handleBack}>
-      Back
-    </button>
-  {/if}
+  </section>
   
-  {#if count < length}
-    <button on:click={handleNext}>
-      Next
-    </button>
-  {/if}
-  
-  {#if count === length}
-    <a href={nextScene}>
-      <button>Next Scene</button>
-    </a>
-  {/if}
-  
+  <style>
+
+    section{
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: grey;
+      color: white;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+      /* height: 60%; */
+    }
+
+    .buttons{
+      text-align: center;
+      bottom:0;
+      left:0;
+      margin:0;
+      padding:20px;
+      display: block;
+      width:100%;
+      background-color: black;
+    }
+
+  </style>
