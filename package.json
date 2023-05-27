@@ -36,6 +36,7 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"dependencies": {
+		"@svelte-web-fonts/google": "^1.0.4",
 		"svelte-crossword": "^0.3.4",
 		"svelte-typewriter": "^3.1.6"
 	}
