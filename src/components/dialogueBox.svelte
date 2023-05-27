@@ -25,6 +25,7 @@
     tooltipText = '';
   }
 
+  // TYPEWRITER EFFECT 
   function handleFinish() {
     finishedPrinting = true;
   }
@@ -51,6 +52,28 @@
     <h1>{speaker}</h1>
   </div>
 
+  <!-- WITHOUT TYPEWRITER EFFECT -->
+    <!-- <p>
+      {#each content.split(/\b(\w+)\b/) as part, i}
+        {#if i % 2 === 0}
+          {part}
+        {:else}
+          {#if tooltips.find(({ word }) => word.toLowerCase() === part.toLowerCase())}
+            <span
+              on:mouseenter={(event) => showTooltip(event, part)}
+              on:mouseleave={hideTooltip}
+              class="tooltip-word"
+            >
+              {part}
+            </span>
+          {:else}
+            {part}
+          {/if}
+        {/if}
+      {/each}
+    </p> -->
+
+    <!-- WITH TYPEWRITER EFFECT -->
   {#if !finishedPrinting}
     <div class="content">
       <p>
