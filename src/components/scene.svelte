@@ -90,6 +90,7 @@
       border: none;
       text-align: center;
       transition: background-color 0.3s ease;
+      cursor: pointer;
     }
 
     a > .next-scene{
