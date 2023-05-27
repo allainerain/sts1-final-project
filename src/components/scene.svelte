@@ -19,7 +19,6 @@
   </script>
   
   <section class = "card">
-    <h1>Scene</h1>
     <DialogueBox class="dialogue-box" speaker={sceneDialogues.body[count].speaker} content={sceneDialogues.body[count].content} character={sceneDialogues.body[count].image} tooltips={tooltips} />
     <div class = "buttons">
       {#if count > 0}
@@ -51,7 +50,6 @@
       left: 0;
       bottom: 0;
       width: 100%;
-      background-color: grey;
       color: white;
       text-align: center;
       padding: 0;

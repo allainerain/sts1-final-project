@@ -50,10 +50,7 @@
 </script>
 
 <!-- <section> -->
-  <div class="character">
-    <img src="/characters/manong-driver-happy.png" alt="{character}" />
-  </div>
-  
+
   <div class="card">
     
     <div class="speaker">
@@ -122,29 +119,19 @@
 
 
 <style>
-  /* section{
-    left: 0;
-    margin:0;
-    padding:0;
-    
-  } */
+ 
   .card {
-    text-align: left-aligned;
+    text-align: left;
     bottom:0;
     left:0;
     margin:0;
-    padding:20px;
+    padding:50px 100px 50px 100px;
     display: block;
     width:100%;
     height: 40%;
     background-color: black;
   }
 
-  .speaker {
-    /* border: 1px solid #aaa;
-        border-radius:2px;
-        box-shadow: 2px 2px 8px rgba(0,0,0,0.1); */
-  }
 
   .tooltip-word {
     text-decoration: underline;
