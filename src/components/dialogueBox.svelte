@@ -127,15 +127,30 @@
     bottom:0;
     left:0;
     margin:0;
-    padding:5vw 10vw 5vw 10vw;
+    padding:2vw 10vw 1vw 10vw;
     width:100;
-    height:40%;
+    height:20%;
     background-color: black;
     font-family: 'Pangolin', cursive;
-
   }
 
+  .speaker{
+    font-size: x-large;
+  }
 
+  .content{
+    font-size: x-large;
+  }
+
+  @media (max-width: 700px) {
+    .speaker{
+      font-size: large;
+    }
+    .content{
+      font-size: large;
+    }
+  }
+  
   .tooltip-word {
     text-decoration: underline;
     cursor: pointer;
