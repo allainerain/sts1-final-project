@@ -1,9 +1,13 @@
 <script>
+  import { afterUpdate } from 'svelte';
+  import Typewriter from 'svelte-typewriter';
+
   export let speaker;
   export let content;
   export let tooltips = [];
 
   let tooltipText = '';
+  let finishedPrinting = false;
 
   function showTooltip(event, word) {
     const tooltip = tooltips.find(({ word: tooltipWord }) =>
@@ -20,6 +24,26 @@
   function hideTooltip() {
     tooltipText = '';
   }
+
+  function handleFinish() {
+    finishedPrinting = true;
+  }
+
+  let contentArray = content.split(' ');
+  let tooltipsExist = contentArray.some(word =>
+    tooltips.find(({ word: tooltipWord }) => tooltipWord.toLowerCase() === word.toLowerCase())
+  );
+
+  afterUpdate(() => {
+    const newContentArray = content.split(' ');
+    if (contentArray.join(' ') !== newContentArray.join(' ')) {
+      finishedPrinting = false;
+      contentArray = newContentArray;
+      tooltipsExist = contentArray.some(word =>
+        tooltips.find(({ word: tooltipWord }) => tooltipWord.toLowerCase() === word.toLowerCase())
+      );
+    }
+  });
 </script>
 
 <div class="card">
@@ -27,25 +51,38 @@
     <h1>{speaker}</h1>
   </div>
 
-  <div class="content">
-    <p>
-      {#each content.split(' ') as word, i}
-        {#if tooltips.find(({ word: tooltipWord }) => tooltipWord.toLowerCase() === word.toLowerCase())}
-          <span
-            on:mouseenter={(event) => showTooltip(event, word)}
-            on:mouseleave={hideTooltip}
-            class="tooltip-word"
-          >
-            {word}{' '}
-          </span>
+  {#if !finishedPrinting}
+    <div class="content">
+      <p>
+
+        <Typewriter on:done={handleFinish}>{content}</Typewriter>
+      </p>
+    </div>
+  {:else}
+    <div class="content">
+      <p>
+        {#if tooltipsExist}
+          {#each contentArray as word, i}
+            {#if tooltips.find(({ word: tooltipWord }) => tooltipWord.toLowerCase() === word.toLowerCase())}
+              <span
+                on:mouseenter={(event) => showTooltip(event, word)}
+                on:mouseleave={hideTooltip}
+                class="tooltip-word"
+              >
+                {word}{' '}
+              </span>
+            {:else}
+              {word}{' '}
+            {/if}
+          {/each}
         {:else}
-          {#if i !== content.split(' ').length - 1}
+          {#each contentArray as word, i}
             {word}{' '}
-          {/if}
+          {/each}
         {/if}
-      {/each}
-    </p>
-  </div>
+      </p>
+    </div>
+  {/if}
 
   {#if tooltipText}
     <div class="tooltip">{tooltipText}</div>

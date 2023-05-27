@@ -10,20 +10,12 @@
   
     function handleNext() {
       count += 1;
-      startTypewriterEffect();
     }
   
     function handleBack() {
       count -= 1;
-      startTypewriterEffect();
     }
   
-    function startTypewriterEffect() {
-      const dialogueBox = document.querySelector('.dialogue-box');
-      if (dialogueBox) {
-        dialogueBox.startTypewriterEffect();
-      }
-    }
   </script>
   
   <h1>Scene</h1>
