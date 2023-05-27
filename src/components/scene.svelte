@@ -32,13 +32,13 @@
     <div class = "buttons">
       {#if count > 0}
       <button on:click={handleBack}>
-        Back
+        &lt;
       </button>
       {/if}
-      
+      {count}
       {#if count < length}
         <button on:click={handleNext}>
-          Next
+          &gt;
         </button>
       {/if}
       
@@ -54,6 +54,9 @@
   
   <style>
 
+    @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+
     section{
       position: fixed;
       left: 0;
@@ -63,7 +66,7 @@
       text-align: center;
       padding: 0;
       margin: 0;
-      /* height: 60%; */
+      font-family: 'Pangolin', cursive;
     }
 
     .buttons{
@@ -76,5 +79,17 @@
       width:100%;
       background-color: black;
     }
+
+    .buttons > button{
+      background-color: black;
+      color:white;
+      font-family: 'Pangolin', cursive;
+      font-size: larger;
+      width: 50px;
+      height: 50px;
+      border: none;
+      transition: background-color 0.3s ease;
+    }
+
 
   </style>
