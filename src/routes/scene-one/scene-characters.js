@@ -1,14 +1,14 @@
 export const sceneCharacters = {
   firstCharacter: {
     name: "OJ",
-    expressions: ['OJ-happy.png', 'OJ-happy.png']
+    expressions: ['OJ-neutral.png', 'OJ-happy.png', 'OJ-happy.png', 'OJ-happy.png']
   },
   secondCharacter: {
     name: "",
-    expressions: ['','','']
+    expressions: ['','','','']
   },
   thirdCharacter: {
     name: "Manuel",
-    expressions: ['manuel-happy.png', 'manuel-happy.png']
+    expressions: ['manuel-happy.png', 'manuel-happy.png', 'manuel-satisfied.png', 'manuel-satisfied.png']
   }
 };
