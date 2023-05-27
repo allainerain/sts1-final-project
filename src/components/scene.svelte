@@ -44,7 +44,7 @@
       
       {#if count === length}
         <a href={nextScene}>
-          <button>Next Scene</button>
+          <button class='next-scene'>Susunod</button>
         </a>
       {/if}
     </div>
@@ -80,7 +80,7 @@
       background-color: black;
     }
 
-    .buttons > button{
+    button{
       background-color: black;
       color:white;
       font-family: 'Pangolin', cursive;
@@ -88,7 +88,14 @@
       width: 50px;
       height: 50px;
       border: none;
+      text-align: center;
       transition: background-color 0.3s ease;
+    }
+
+    a > .next-scene{
+      position: relative;
+      width: 50px;
+      text-align: left;
     }
 
 
