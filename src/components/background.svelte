@@ -17,7 +17,7 @@
 <style>
     .background {
         width: 100%;
-        height: 70vh;
+        height: 80vh;
         position: fixed;
         top: 0;
         left: 0;
