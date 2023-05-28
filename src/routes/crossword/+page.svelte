@@ -1,14 +1,26 @@
 <script>
     import CrosswordPuzzle from '../../components/crosswordPuzzle.svelte'
+    import Background from '../../components/background.svelte'
+    // import '/backgrounds/crossword/-background.jpg'
 
 </script>
 
-<div>
+<body>
     <CrosswordPuzzle class='crossword-puzzle'/>
-</div>
+</body>
+
+
 
 <style>
-    
+
+body{
+    top:0;
+    bottom:0;
+    width:100;
+    height:100;
+    margin:0 0 0 0;
+    background-image: url('/backgrounds/crossword-background.jpg')
+}
 
 </style>
 

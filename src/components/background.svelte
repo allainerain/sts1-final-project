@@ -1,15 +1,12 @@
 <script>
     export let background;
-
     import { afterUpdate } from 'svelte';
-  
+
     let backgroundSrc;
-  
+
     afterUpdate(() => {
         backgroundSrc = `/backgrounds/${background}`;
     });
-
-
 
 </script>
 

@@ -4,10 +4,8 @@
 
 </script>
 
-<div >
-
+<div>
     <Crossword  data="{crosswordData}" />
-
 </div>
 
 <style>
@@ -15,6 +13,7 @@
 
 div {
     --xd-font: 'Pangolin';
+    max-height: 40vw;
     max-width: 960px;
     margin: 3rem auto;
     margin-bottom: 6rem;
