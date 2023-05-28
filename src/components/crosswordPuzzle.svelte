@@ -22,7 +22,7 @@
             let:onReveal
             let:onCheck >
             <button on:click="{onClear}">Ibura lahat</button>
-            <button on:click="{onReveal}">Suko na</button>
+            <!-- <button on:click="{onReveal}">Suko na</button> -->
             <button on:click="{onCheck}">Check kung tama</button>
             <a href="/scene-six"> <button> Suko na</button> </a>
         </div>
