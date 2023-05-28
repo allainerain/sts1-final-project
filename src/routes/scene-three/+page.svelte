@@ -7,7 +7,7 @@
 </script>
   
   
-<Background background="scene-one-background.png"/>
+<Background background="scene-three-background.png"/>
 
 <Scene sceneCharacters={sceneCharacters} sceneDialogues={sceneDialogues} nextScene="scene-four" {tooltips} />
   

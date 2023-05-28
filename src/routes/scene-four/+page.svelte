@@ -8,7 +8,7 @@
     
   </script>
   
-  <Background background="scene-one-background.png"/>
+  <Background background="scene-four-background.png"/>
   <Scene
     sceneCharacters={sceneCharacters}
     sceneDialogues={sceneDialogues}

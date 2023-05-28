@@ -5,6 +5,6 @@
     import Scene from '../../components/scene.svelte'
 </script>
 
-<Background background="scene-one-background.png"/>
+<Background background="scene-two-background.png"/>
 <Scene sceneCharacters={sceneCharacters} sceneDialogues={sceneDialogues} nextScene="scene-three"/>
 
