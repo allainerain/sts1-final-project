@@ -1,11 +1,11 @@
 export const sceneCharacters = {
   firstCharacter: {
     name: "OJ",
-    expressions: ['OJ-sad.png', 'OJ-sad.png', 'OJ-sad.png', 'OJ-sad.png', 'OJ-neutral.png', 'OJ-neutral.png', 'OJ-neutral.png', 'OJ-neutral.png', 'OJ-neutral.png', 'OJ-neutral.png', 'OJ-neutral.png']
+    expressions: ['OJ-sad.png', 'OJ-sad.png', 'OJ-sad.png', 'OJ-sad.png', 'OJ-neutral.png', 'OJ-neutral.png', 'OJ-neutral.png', 'jose.png', 'jose.png', 'jose.png', 'jose.png']
   },
   secondCharacter: {
     name: "Gasoline Boy",
-    expressions: ['','','','','jose.png','jose.png','jose.png','jose.png','jose.png','jose.png']
+    expressions: ['','','','','','jose.png','jose.png','e-trike.png','e-trike.png','e-trike.png','e-trike.png']
   },
   thirdCharacter: {
     name: "Manuel",
