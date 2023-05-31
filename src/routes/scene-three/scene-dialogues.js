@@ -22,7 +22,7 @@ export const sceneDialogues = {
                     content: 'Oo nga. Kaya nga hindi ko din alam gagawin ko.'
                 },
                 {
-                    speaker: 'Manong Driver 2',
+                    speaker: 'Jose',
                     content: 'Oy pare! Kamusta ka na?'
                 },
                 {
@@ -30,7 +30,7 @@ export const sceneDialogues = {
                     content: 'Heto nag-iisip. Hindi ka na pumapasada?'
                 },
                 {
-                    speaker: 'Manong Driver 2',
+                    speaker: 'Jose',
                     content: 'Hindi na. Mabuti nang hindi pumasada kaysa sa laging antayin ang magiging desisyon nila. Si Jipoy ko ginagamit nalang naming pampamilya.'
                 },
                 {
@@ -38,7 +38,7 @@ export const sceneDialogues = {
                     content: 'e anong pinagkakakitaan mo ngayon?'
                 },
                 {
-                    speaker: 'Manong Driver 2',
+                    speaker: 'Jose',
                     content: 'Heto yung binili kong e-trike, si Jipoy. Eto lang ang kaya ng bulsa ko e. Masyadong mahal yung e-jeep nila na yon.'
                 },
                 {
