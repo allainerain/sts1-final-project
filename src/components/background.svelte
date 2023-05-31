@@ -25,15 +25,24 @@
         background-position: center top; /* Adjust the position here */
     }
 
-    @media (max-width: 1000px) {
-      .background {
-        height: 75vh;
-      }
-    }
-
     .background img {
         object-fit: cover;
         width: 100%;
         height: 100%;
+    }
+
+    @media (min-width: 1500px) {
+        .background {
+        max-width: 82vw;
+        margin: 0 8vw 0 8vw;
+        }
+    }
+
+
+    @media (min-width: 1700px) {
+      .background {
+        max-width: 80vw;
+        margin: 0 10vw 0 10vw;
+      }
     }
 </style>

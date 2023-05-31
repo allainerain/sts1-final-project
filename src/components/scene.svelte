@@ -48,8 +48,6 @@
         </a>
       {/if}
     </div>
- 
-  
   </section>
   
   <style>
@@ -74,7 +72,6 @@
       bottom:0;
       left:0;
       margin:0;
-      padding:20px;
       display: block;
       width:100%;
       background-color: black;
@@ -99,5 +96,18 @@
       text-align: left;
     }
 
+    @media (min-width: 1500px) {
+      .card {
+        max-width: 82vw;
+        margin: 0 8vw 0 8vw;
+      }
+    }
+
+    @media (min-width: 1700px) {
+      .card {
+        max-width: 80vw;
+        margin: 0 10vw 0 10vw;
+      }
+    }
 
   </style>
