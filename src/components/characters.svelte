@@ -17,71 +17,6 @@
   });
 </script>
 
-<style>
-  .characters {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-  }
-
-  .character-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .character-column:first-child {
-    margin-right: auto;
-  }
-
-  .character-column:last-child {
-    margin-left: auto;
-  }
-
-  .character-column img {
-    max-width: 45vw;
-    max-height: 45vw;
-    /* transition: max-width 0.5s, max-height 0.5s; */
-  }
-
-  @media (max-width: 1500px) {
-    .character-column img {
-      max-width: 35vw;
-      max-height: 35vw;
-    }
-  }
-
-  @media (max-width: 1300px) {
-    .character-column img {
-      max-width: 40vw;
-      max-height: 40vw;
-    }
-  }
-
-  @media (max-width: 1000px) {
-    .character-column img {
-      max-width: 50vw;
-      max-height: 50vw;
-    }
-  }
-
-  @media (max-width: 700px) {
-    .character-column img {
-      max-width: 50vw;
-      max-height: 50vw;
-    }
-  }
-
-  @media (max-width: 400px) {
-    .character-column img {
-      max-width: 50vw;
-      max-height: 50vw;
-    }
-  }
-</style>
-
 <div class="characters">
   <div class="character-column">
     <img src={firstSrc} alt={firstCharacter} />
@@ -93,3 +28,47 @@
     <img src={thirdSrc} alt={thirdCharacter} />
   </div>
 </div>
+
+<style>
+  .characters {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .character-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .character-column:first-child {
+    margin-right: 0;
+  }
+
+  .character-column:last-child {
+    margin-left: 0;
+  }
+
+  .character-column img {
+    max-width: 50vw;
+    max-height: 50vw;
+    width: 100%; 
+    height: auto; 
+  }
+
+  @media (max-width: 768px) {
+    .character-column img {
+      max-width: 70vw; 
+      max-height: 70vw; 
+    }
+  }
+
+  @media (max-width: 480px) {
+    .character-column img {
+      max-width: 90vw; 
+      max-height: 90vw; 
+    }
+  }
+</style>
