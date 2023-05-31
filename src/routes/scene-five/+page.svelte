@@ -14,6 +14,3 @@
     nextScene="/credits"
   />
 </section>
-
-
-  
