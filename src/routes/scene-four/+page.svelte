@@ -4,10 +4,10 @@
     import { tooltips } from './scene-tooltips.js';
     import Background from '../../components/background.svelte'
     import { sceneCharacters } from './scene-characters.js'
-
-    
-  </script>
+    import { fade } from 'svelte/transition'
+</script>
   
+<section transition:fade="{{ duration: 1000}}">
   <Background background="scene-four-background.png"/>
   <Scene
     sceneCharacters={sceneCharacters}
@@ -15,7 +15,7 @@
     nextScene="/crossword"
     {tooltips}
   />
-  
+</section>
 
 
   
