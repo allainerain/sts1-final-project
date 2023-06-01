@@ -153,7 +153,7 @@
   
   .tooltip-word {
     text-decoration: underline;
-    cursor: pointer;
+    /* cursor: pointer; */
   }
 
   .tooltip {
