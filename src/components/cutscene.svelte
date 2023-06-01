@@ -32,11 +32,17 @@
     }
 
     .card {
-        position: relative;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        /* position: relative; */
         height: 100vh;
         display: flex;
         flex-direction: column;
         background-color: black;
+        margin: 0;
+        padding: 0;
     }
 
     .image-wrapper {
@@ -50,6 +56,7 @@
         align-items: center;
         height: fit-content;
         padding: 10px;
+        margin: 0;
     }
 
     button {
