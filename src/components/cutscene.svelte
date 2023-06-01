@@ -36,7 +36,6 @@
         top: 0;
         left: 0;
         z-index: -1;
-        /* position: relative; */
         height: 100vh;
         display: flex;
         flex-direction: column;
@@ -67,7 +66,7 @@
         border: 0px;
         border-radius: 5px;
         padding: 10px 15px;
-        margin: 10px;
+        margin: 10px 0 100px;
         cursor: pointer;
         width: 200px;
     }
