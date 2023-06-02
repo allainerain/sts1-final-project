@@ -17,11 +17,18 @@
     let count = 0;
   
     function handleNext() {
+      playSound();
       count += 1;
     }
   
     function handleBack() {
+      playSound();
       count -= 1;
+    }
+
+    function playSound() {
+        const audio = new Audio('/sounds/click.mp3');
+        audio.play();
     }
   
   </script>
@@ -44,7 +51,7 @@
       
       {#if count === length}
         <a href={nextScene}>
-          <button class='next-scene'>Susunod</button>
+          <button on:click={playSound} class='next-scene'>Susunod</button>
         </a>
       {/if}
     </div>
