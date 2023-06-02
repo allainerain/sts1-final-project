@@ -33,9 +33,7 @@
   }
 
   function stopSound() {
-    if (audio) {
       audio.pause();
-    }
   }
 
   function playButton() {
@@ -45,12 +43,13 @@
   }
 
   function beforeUnload() {
-      stopSound();
-    }
+    console.log("stopping sound")
+    stopSound();
+  }
 
 </script>
 
-<svelte:window on:click={playSound} on:beforeunload={beforeUnload}/>
+<svelte:window on:click={playSound} on:beforeunload|preventDefault={beforeUnload}/>
 <section class="card">
     <div class="image-wrapper">
         <img src={imageSrc} alt={imageSrc}/>

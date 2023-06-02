@@ -61,7 +61,6 @@
   
     function stopSound() {
       background.pause();
-
     }
 
     function playButton() {
@@ -71,12 +70,13 @@
     }
   
     function beforeUnload() {
+      console.log("stopping sound")
       stopSound();
     }
 
 </script>
 
-  <svelte:window on:click={playBackground} on:beforeunload={beforeUnload}/>
+  <svelte:window on:click={playBackground} on:beforeunload|preventDefault={beforeUnload}/>
   <section class = "card">
     <Characters firstCharacter={firstCharacterExp[count]} secondCharacter={secondCharacterExp[count]} thirdCharacter={thirdCharacterExp[count]}/>
     <DialogueBox class="dialogue-box" speaker={sceneDialogues.body[count].speaker} content={sceneDialogues.body[count].content} character={sceneDialogues.body[count].image} tooltips={tooltips} />
