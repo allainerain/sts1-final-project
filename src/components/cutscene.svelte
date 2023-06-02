@@ -9,6 +9,8 @@
   let soundSrc;
   let imageSrc;
   let audio;
+  let volume = 0.2; // Adjust the volume value (0 to 1) as desired
+
 
   onMount(() => {
     imageSrc = `/backgrounds/${image}`;
@@ -20,6 +22,7 @@
     if (!playing){
         playing = true;
         audio = new Audio(soundSrc);
+        audio.volume = volume
         setTimeout(startPlayback, 500);
     }
   }
