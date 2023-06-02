@@ -13,8 +13,6 @@
   onMount(() => {
     imageSrc = `/backgrounds/${image}`;
     soundSrc = `/sounds/${sound}`;
-
-
   });
 
   let playing = false;

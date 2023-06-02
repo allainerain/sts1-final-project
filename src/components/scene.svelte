@@ -1,12 +1,13 @@
 <script>
     import DialogueBox from './dialogueBox.svelte';
     import Characters from './characters.svelte';
-    import { onMount } from 'svelte';
+    import { afterUpdate } from 'svelte';
   
     export let nextScene;
     export let sceneDialogues;
     export let tooltips;
     export let sceneCharacters;
+    export let sound;
 
     let firstCharacterExp = sceneCharacters.firstCharacter.expressions
     let secondCharacterExp = sceneCharacters.secondCharacter.expressions
@@ -32,24 +33,27 @@
         audio.play();
     }
 
-    export let sound;
-  
     let soundSrc;
 
-    onMount(() => {
+    afterUpdate(() => {
       soundSrc = `/sounds/${sound}`;
-
-      startPlayback();
+      console.log(soundSrc)
     });
 
     let background;
 
+    let playing = false;
     function playBackground() {
-      background = new Audio(soundSrc);
-      setTimeout(startPlayback, 500);
+      console.log("play bg called")
+      if (!playing){
+          playing = true;
+          background = new Audio(soundSrc);
+          setTimeout(startPlayback, 500);
+      }
     }
   
     function startPlayback() {
+      console.log("start playback called")
       background.play();
     }
   
@@ -65,7 +69,7 @@
     }
   
 </script>
-  
+  <svelte:window on:click={playBackground}/>
   <section class = "card">
     <Characters firstCharacter={firstCharacterExp[count]} secondCharacter={secondCharacterExp[count]} thirdCharacter={thirdCharacterExp[count]}/>
     <DialogueBox class="dialogue-box" speaker={sceneDialogues.body[count].speaker} content={sceneDialogues.body[count].content} character={sceneDialogues.body[count].image} tooltips={tooltips} />
