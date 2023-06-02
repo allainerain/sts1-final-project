@@ -129,7 +129,7 @@
     margin: 0;
     padding: 2vw 10vw 1vw 10vw;
     width: 100; /* Adjust the width to your desired fixed size */
-    height: 200px; /* Adjust the height to your desired fixed size */
+    height: 20vh; /* Adjust the height to your desired fixed size */
     background-color: black;
     font-family: 'Pangolin', cursive;
   }

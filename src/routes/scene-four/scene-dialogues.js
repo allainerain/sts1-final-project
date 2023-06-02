@@ -31,7 +31,11 @@ export const sceneDialogues = {
                 },
                 {
                     speaker: 'EJ',
-                    content: 'Ako kasi, I’m designed to be energy efficient at almost zero rin ang contribution ko as pollution kasi wala na akong tambutso kaya nakakatulong ako para mag improve ang local air quality kasi near-zero production ko ng harmful pollutants tulad ng nitrogen oxides, particulate matter at carbon dioxide pag ako ang ginagamit sa pag da-drive.'
+                    content: 'Ako kasi, I’m designed to be energy efficient at almost zero rin ang contribution ko as pollution kasi wala na akong tambutso.'
+                },
+                {
+                    speaker: 'EJ',
+                    content: 'Kaya nakakatulong ako para mag improve ang local air quality kasi near-zero production ko ng harmful pollutants tulad ng nitrogen oxides, particulate matter at carbon dioxide pag ako ang ginagamit sa pag da-drive.'
                 },
                 {
                     speaker: 'OJ',
