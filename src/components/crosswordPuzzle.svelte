@@ -1,11 +1,46 @@
 <script>
     import Crossword from "svelte-crossword";
     import crosswordData from "./crosswordData.json"
+    import { afterUpdate } from 'svelte'
 
-    // console.log(revealed)
+    export let sound;
 
+    let soundSrc;
+
+    afterUpdate(() => {
+      soundSrc = `/sounds/${sound}`;
+      console.log(soundSrc)
+    });
+
+    let playing = false;
+    let background;
+    function playBackground() {
+      console.log("play bg called")
+      if (!playing){
+          playing = true;
+          background = new Audio(soundSrc);
+          setTimeout(startPlayback, 500);
+      }
+    }
+  
+    function startPlayback() {
+      console.log("start playback called")
+      background.play();
+    }
+  
+    function stopSound() {
+      background.pause();
+
+    }
+
+    function playButton() {
+      const audio = new Audio('/sounds/click.mp3');
+      stopSound();
+      audio.play();
+    }
 </script>
 
+<svelte:window on:click={playBackground} />
 <div>
     <Crossword data="{crosswordData}">
 
@@ -13,7 +48,7 @@
             <img src="/characters/manuel-happy.png" alt="manuel happy" />
             <h2>Mahusay!</h2>
             <p>Magaling, alam mo na ang mga magagandang benepisyo ng mga electric vehicles!</p>
-            <a href="/scene-five"><button>Tumuloy sa susunod</button></a>
+            <a href="/scene-five"><button on:click={playButton()}>Tumuloy sa susunod</button></a>
         </div>
         <div
             class="toolbar"
@@ -22,7 +57,7 @@
             let:onReveal
             let:onCheck >
             <button on:click="{onClear}">Ibura lahat</button>
-            <!-- <button on:click="{onReveal}">Suko na</button> -->
+            <button on:click="{onReveal}">Suko na</button>
             <button on:click="{onCheck}">Check kung tama</button>
             <a href="/scene-six"> <button> Suko na</button> </a>
         </div>

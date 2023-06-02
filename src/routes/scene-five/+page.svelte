@@ -12,5 +12,6 @@
     sceneCharacters={sceneCharacters}
     sceneDialogues={sceneDialogues}
     nextScene="/credits"
+    sound="evolution-and-harmony.mp3"
   />
 </section>

@@ -12,5 +12,6 @@
     sceneCharacters={sceneCharacters}
     sceneDialogues={sceneDialogues}
     nextScene="/credits"
+    sound="libary.mp3"
   />
 </section>
