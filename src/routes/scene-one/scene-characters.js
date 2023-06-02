@@ -9,6 +9,6 @@ export const sceneCharacters = {
   },
   thirdCharacter: {
     name: "Manuel",
-    expressions: ['manuel-happy.png', 'manuel-happy.png', 'manuel-satisfied.png', 'manuel-satisfied.png']
+    expressions: ['manuel-happy.png', 'manuel-happy.png', 'manuel-happier.png', 'manuel-happier.png']
   }
 };
