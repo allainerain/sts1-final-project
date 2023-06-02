@@ -70,8 +70,13 @@
       audio.play();
     }
   
+    function beforeUnload() {
+      stopSound();
+    }
+
 </script>
-  <svelte:window on:click={playBackground}/>
+
+  <svelte:window on:click={playBackground} on:beforeunload={beforeUnload}/>
   <section class = "card">
     <Characters firstCharacter={firstCharacterExp[count]} secondCharacter={secondCharacterExp[count]} thirdCharacter={thirdCharacterExp[count]}/>
     <DialogueBox class="dialogue-box" speaker={sceneDialogues.body[count].speaker} content={sceneDialogues.body[count].content} character={sceneDialogues.body[count].image} tooltips={tooltips} />
