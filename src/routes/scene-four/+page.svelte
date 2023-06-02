@@ -14,6 +14,7 @@
     sceneDialogues={sceneDialogues}
     nextScene="/crossword"
     {tooltips}
+    sound="butter-building.mp3"
   />
 </section>
 
