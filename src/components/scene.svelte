@@ -1,6 +1,7 @@
 <script>
     import DialogueBox from './dialogueBox.svelte';
-    import Characters from './characters.svelte'
+    import Characters from './characters.svelte';
+    import { onMount } from 'svelte';
   
     export let nextScene;
     export let sceneDialogues;
@@ -30,8 +31,40 @@
         const audio = new Audio('/sounds/click.mp3');
         audio.play();
     }
+
+    export let sound;
   
-  </script>
+    let soundSrc;
+
+    onMount(() => {
+      soundSrc = `/sounds/${sound}`;
+
+      startPlayback();
+    });
+
+    let background;
+
+    function playBackground() {
+      background = new Audio(soundSrc);
+      setTimeout(startPlayback, 500);
+    }
+  
+    function startPlayback() {
+      background.play();
+    }
+  
+    function stopSound() {
+      background.pause();
+
+    }
+
+    function playButton() {
+      const audio = new Audio('/sounds/click.mp3');
+      stopSound();
+      audio.play();
+    }
+  
+</script>
   
   <section class = "card">
     <Characters firstCharacter={firstCharacterExp[count]} secondCharacter={secondCharacterExp[count]} thirdCharacter={thirdCharacterExp[count]}/>
@@ -51,7 +84,7 @@
       
       {#if count === length}
         <a href={nextScene}>
-          <button on:click={playSound} class='next-scene'>Susunod</button>
+          <button on:click={playButton} class='next-scene'>Susunod</button>
         </a>
       {/if}
     </div>

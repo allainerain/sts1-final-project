@@ -8,5 +8,5 @@
 
 <section transition:fade="{{ duration: 1000}}">
     <Background background="scene-two-background.png"/>
-    <Scene sceneCharacters={sceneCharacters} sceneDialogues={sceneDialogues} nextScene="scene-three-cutscene"/>
+    <Scene sceneCharacters={sceneCharacters} sceneDialogues={sceneDialogues} nextScene="scene-three-cutscene" sound="evolution-and-harmony.mp3"/>
 </section>

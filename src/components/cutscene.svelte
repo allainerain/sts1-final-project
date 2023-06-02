@@ -1,66 +1,49 @@
 <script>
-    import { onMount } from 'svelte';
-  
-    export let image;
-    export let text;
-    export let link;
-    export let sound;
-  
-    let soundSrc;
-    let imageSrc;
-  
-    onMount(() => {
-      imageSrc = `/backgrounds/${image}`;
-      soundSrc = `/sounds/${sound}`;
-  
-      playSound();
-    });
-  
-    let audio;
-    let audioContext;
-    let gainNode;
-  
-    function playSound() {
-      audioContext = new AudioContext();
-      audio = new Audio(soundSrc);
-      const source = audioContext.createMediaElementSource(audio);
-      gainNode = audioContext.createGain();
-      source.connect(gainNode);
-      gainNode.connect(audioContext.destination);
-  
-      // Mute the audio
-      audio.muted = true;
-  
-      // Start audio playback with a delay to allow the audio to load
-      setTimeout(startPlayback, 500);
-    }
-  
-    function startPlayback() {
-      // Unmute the audio and play
-      audio.muted = false;
-      audio.play();
-    }
-  
-    function stopSound() {
-      if (audioContext) {
-        const fadeOutDuration = 2; // Duration in seconds for fade-out
-        const fadeOutTime = audioContext.currentTime + fadeOutDuration;
-        gainNode.gain.linearRampToValueAtTime(0, fadeOutTime);
-        audio.pause();
-        setTimeout(() => {
-          audio.currentTime = 0;
-          gainNode.gain.setValueAtTime(1, audioContext.currentTime);
-        }, fadeOutDuration * 1000);
-      }
-    }
+  import { onMount } from 'svelte';
 
-    function playButton() {
-        const audio = new Audio('/sounds/click.mp3');
-        stopSound();
-        audio.play();
+  export let image;
+  export let text;
+  export let link;
+  export let sound;
+
+  let soundSrc;
+  let imageSrc;
+  let audio;
+
+  onMount(() => {
+    imageSrc = `/backgrounds/${image}`;
+    soundSrc = `/sounds/${sound}`;
+
+
+  });
+
+  let playing = false;
+  function playSound() {
+    if (!playing){
+        playing = true;
+        audio = new Audio(soundSrc);
+        setTimeout(startPlayback, 500);
     }
+  }
+
+  function startPlayback() {
+    audio.play();
+  }
+
+  function stopSound() {
+    if (audio) {
+      audio.pause();
+    }
+  }
+
+  function playButton() {
+    const clickSound = new Audio('/sounds/click.mp3');
+    stopSound();
+    clickSound.play();
+  }
 </script>
 
+<svelte:window on:click={playSound}/>
 <section class="card">
     <div class="image-wrapper">
         <img src={imageSrc} alt={imageSrc}/>
