@@ -14,7 +14,7 @@
     let thirdCharacterExp = sceneCharacters.thirdCharacter.expressions
 
     console.log(firstCharacterExp)
-
+    
     let length = sceneDialogues.body.length - 1;
     let count = 0;
   
@@ -33,6 +33,7 @@
         audio.play();
     }
 
+    let volume = 0.2; // Adjust the volume value (0 to 1) as desired
     let soundSrc;
 
     afterUpdate(() => {
@@ -48,6 +49,7 @@
       if (!playing){
           playing = true;
           background = new Audio(soundSrc);
+          background.volume = volume; // Set the volume here
           setTimeout(startPlayback, 500);
       }
     }

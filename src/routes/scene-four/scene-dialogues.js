@@ -31,11 +31,11 @@ export const sceneDialogues = {
                 },
                 {
                     speaker: 'EJ',
-                    content: 'Ako kasi, I’m designed to be energy efficient at almost zero rin ang contribution ko as pollution kasi wala na akong tambutso.'
+                    content: 'Ako kasi, I’m designed to be energy_efficient at almost zero rin ang contribution ko as pollution kasi wala na akong tambutso.'
                 },
                 {
                     speaker: 'EJ',
-                    content: 'Kaya nakakatulong ako para mag improve ang local air quality kasi near-zero production ko ng harmful pollutants tulad ng nitrogen oxides, particulate matter at carbon dioxide pag ako ang ginagamit sa pag da-drive.'
+                    content: 'Kaya nakakatulong ako para mag improve ang local air quality kasi near-zero production ko ng harmful pollutants tulad ng nitrogen_oxides, particulate_matter at carbon_dioxide pag ako ang ginagamit sa pag da-drive.'
                 },
                 {
                     speaker: 'OJ',
@@ -43,7 +43,7 @@ export const sceneDialogues = {
                 },
                 {
                     speaker: 'EJ',
-                    content: 'Not just that…at dahil nga electricity ang gamit ko, I can use renewable resources such as solar, wind, and hydroelectricity to fill me up!                    '
+                    content: 'Not just that…at dahil nga electricity ang gamit ko, I can use renewable_resources such as solar, wind, and hydroelectricity to fill me up!                    '
                 },
                 {
                     speaker: 'OJ',
