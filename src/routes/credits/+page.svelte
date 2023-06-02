@@ -4,7 +4,7 @@
 </script>
 
 <div transition:fade="{{ duration: 1000}}" class = "main">
-    <Cutscene image="scene-three-cutscene.png" text="Susunod" link="/scene-three" sound="broadcast.mp3" message=""/>
+    <Cutscene image="credits.png" text="Balik sa Simula" link="/" message="Salamat sa paglalaro!" sound="another-arni.mp3"/>
 </div>
 
 <style>

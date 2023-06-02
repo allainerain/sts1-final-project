@@ -5,6 +5,7 @@
   export let text;
   export let link;
   export let sound;
+  export let message;
 
   let soundSrc;
   let imageSrc;
@@ -49,7 +50,11 @@
     <div class="image-wrapper">
         <img src={imageSrc} alt={imageSrc}/>
     </div>
+    <div>
+        <h3>{message}</h3>
+    </div>
     <div class="button-wrapper">
+        
         <a href={link}>
             <button on:click={playButton}>{text}</button>
         </a>
@@ -58,6 +63,19 @@
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+    div{
+        font-family: 'Pangolin', cursive;
+        justify-content: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:0;
+    }
+
+    h3{
+        margin:0;
+        padding:0;
+    }
 
     img {
         width: 100%;
@@ -74,6 +92,7 @@
         display: flex;
         flex-direction: column;
         background-color: black;
+        color:white;
         margin: 0;
         padding: 0;
     }
@@ -88,7 +107,7 @@
         justify-content: center;
         align-items: center;
         height: fit-content;
-        padding: 10px;
+        padding: 5px;
         margin: 0;
     }
 
