@@ -5,7 +5,7 @@ export const sceneCharacters = {
   },
   secondCharacter: {
     name: "Gasoline Boy",
-    expressions: ['gasoline-boy.png','','','','','','']
+    expressions: ['gasoline-boy.png','gasoline-boy.png','','','','','']
   },
   thirdCharacter: {
     name: "Manuel",
