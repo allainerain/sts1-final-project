@@ -43,9 +43,14 @@
     stopSound();
     clickSound.play();
   }
+
+  function beforeUnload() {
+      stopSound();
+    }
+
 </script>
 
-<svelte:window on:click={playSound}/>
+<svelte:window on:click={playSound} on:beforeunload={beforeUnload}/>
 <section class="card">
     <div class="image-wrapper">
         <img src={imageSrc} alt={imageSrc}/>
