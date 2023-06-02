@@ -7,7 +7,7 @@
 </script>
 
 <section transition:fade="{{ duration: 1000}}">
-  <Background background="scene-one-background.png"/>
+  <Background background="scene-five-background.png"/>
   <Scene
     sceneCharacters={sceneCharacters}
     sceneDialogues={sceneDialogues}

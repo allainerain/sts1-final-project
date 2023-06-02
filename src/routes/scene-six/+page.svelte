@@ -7,11 +7,11 @@
 </script>
 
 <section transition:fade="{{ duration: 1000}}">
-  <Background background="scene-two-background.png"/>
+  <Background background="scene-six-background.png"/>
   <Scene
     sceneCharacters={sceneCharacters}
     sceneDialogues={sceneDialogues}
     nextScene="/credits"
-    sound="libary.mp3"
+    sound="library.mp3"
   />
 </section>
