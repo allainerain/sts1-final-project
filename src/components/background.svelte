@@ -10,11 +10,21 @@
 
 </script>
 
-<div class="background">
-    <img src={backgroundSrc} alt='scene one background' />
-</div>
+<section>
+    <div class="background">
+        <img src={backgroundSrc} alt='scene one background' />
+    </div>
+</section>
 
 <style>
+    section{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+    }
     .background {
         width: 100%;
         height: 80vh;

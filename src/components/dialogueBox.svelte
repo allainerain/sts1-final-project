@@ -81,7 +81,7 @@
       <!-- WITH TYPEWRITER EFFECT -->
       {#if !finishedPrinting}
       <div class="content">
-        <p> <Typewriter on:done={handleFinish}>{content}</Typewriter> </p>
+        <p> <Typewriter cursor={false} on:done={handleFinish}>{content}</Typewriter> </p>
       </div>
       {:else}
         <div class="content">
@@ -124,12 +124,12 @@
  
   .card {
     text-align: left;
-    bottom:0;
-    left:0;
-    margin:0;
-    padding:2vw 10vw 1vw 10vw;
-    width:100;
-    height:20%;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 2vw 10vw 1vw 10vw;
+    width: 100; /* Adjust the width to your desired fixed size */
+    height: 200px; /* Adjust the height to your desired fixed size */
     background-color: black;
     font-family: 'Pangolin', cursive;
   }
