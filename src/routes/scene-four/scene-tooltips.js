@@ -1,14 +1,13 @@
 export const tooltips = [
-    { word: 'gasolina', meaning: 'To make modern or up-to-date' },
-    { word: 'energy efficient', meaning: 'Traditional Philippine public utility vehicles' },
-    { word: 'near-zero', meaning: 'Electronic tricycle'},
-    { word: 'pollutants', meaning: 'Electronic tricycle'},
-    { word: 'nitrogen oxides,', meaning: 'Electronic tricycle'},
-    { word: 'particulate matter', meaning: 'Electronic tricycle'},
-    { word: 'carbon dioxide', meaning: 'Electronic tricycle'},
-    { word: 'electricity', meaning: 'Electronic tricycle'},
-    { word: 'renewable resources', meaning: 'Electronic tricycle'},
-    { word: 'solar,', meaning: 'Electronic tricycle'},
-    { word: 'wind,', meaning: 'Electronic tricycle'},
-    { word: 'hydroelectricity', meaning: 'Electronic tricycle'}
+    { word: 'gasolina', meaning: 'Traditional vehicle fuel' },
+    { word: 'energy efficient', meaning: 'Designed to minimize energy consumption' },
+    { word: 'pollutants', meaning: 'Harmful substances released into the environment'},
+    { word: 'nitrogen oxides,', meaning: 'Produced primarily by combustion engines, contribute to air pollution and are a major component of smog'},
+    { word: 'particulate matter', meaning: 'Tiny particles suspended in the air'},
+    { word: 'carbon dioxide', meaning: 'A gas that is the major contributor to climate change'},
+    { word: 'electricity', meaning: 'A power source of electric vehicles'},
+    { word: 'renewable resources', meaning: 'Sustainable sources of energy'},
+    { word: 'solar,', meaning: 'Energy from the sun'},
+    { word: 'wind,', meaning: 'Harnessing energy from moving air'},
+    { word: 'hydroelectricity', meaning: 'Power from flowing water'}
   ];
